@@ -28,6 +28,10 @@ body {
 
 .page {}
 
+.page._fixed {
+  padding-top: 20px;
+}
+
 .page__hero {
   margin-bottom: 170px;
 }
@@ -169,6 +173,16 @@ body {
   padding-top: 77px;
   position: relative;
   z-index: 50;
+  transition: all .6s ease;
+}
+
+.header._fixed {
+  background-color: rgb(68, 117, 242);
+  position: fixed;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  transition: background-color .6s ease;
 }
 
 .header__container {
