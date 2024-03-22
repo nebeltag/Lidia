@@ -29,11 +29,12 @@ body {
 .page {}
 
 .page._fixed {
-  padding-top: 20px;
+  padding-top: 100px;
 }
 
 .page__hero {
   margin-bottom: 170px;
+  padding-top: 62px;
 }
 
 .page__features,
@@ -82,6 +83,10 @@ body {
 @media(max-width:469.98px) {
   .page__hero {
     padding-top: 50px;
+  }
+
+  .fictive {
+    display: none;
   }
 }
 
@@ -182,7 +187,10 @@ body {
   top: -40px;
   left: 0;
   width: 100%;
-  transition: background-color .6s ease;
+  padding-top: 57px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  transition: all .4s ease-out;
 }
 
 .header__container {
@@ -235,7 +243,14 @@ body {
 }
 
 @media(max-width:479.98px) {
-  .header {
+  /* .header {
+    padding-top: 15px;
+  } */
+
+  .header._fixed {
+    position: relative;
+    top: 0;
+    left: 0;
     padding-top: 15px;
   }
 
@@ -262,7 +277,7 @@ body {
 /* Hero */
 
 .hero {
-  padding-top: 62px;
+  /* padding-top: 62px; */
   padding-bottom: 40px;
   position: relative;
 }
@@ -788,4 +803,29 @@ body {
   .footer__body {
     margin-bottom: 30px;
   }
+}
+
+/* Up button */
+
+.upbtn {
+  z-index: 200;
+  position: fixed;
+  bottom: 18%;
+  right: 2%;
+  cursor: pointer;
+  transition: all .7s ease-in-out;
+  transform: scale(0);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid #BFE2FF;
+  background: no-repeat center center/50% url(../img/up-arrow.svg) #337AB7;
+}
+
+.upbtn._show {
+  transform: scale(1);
+}
+
+.upbtn:hover {
+  transform: scale(1.2);
 }
